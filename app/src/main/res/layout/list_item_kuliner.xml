@@ -4,6 +4,11 @@
     android:layout_height="wrap_content"
     android:layout_margin="6dp">
 
+<!--    tv_id-->
+<!--    tv_nama-->
+<!--    tv_asal-->
+<!--    tv_deskripsi_singkat-->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
