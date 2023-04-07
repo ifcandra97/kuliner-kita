@@ -2,18 +2,65 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:backgroundTint="#DFFFD8"
+    app:cardCornerRadius="10dp"
     android:layout_margin="6dp">
-
-<!--    tv_id-->
-<!--    tv_nama-->
-<!--    tv_asal-->
-<!--    tv_deskripsi_singkat-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:elevation="6dp"
         android:layout_margin="6dp">
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id Kuliner"
+            android:fontFamily="@font/quicksandbold"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama Kuliner"
+            android:fontFamily="@font/quicksandbold"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:drawableStart="@drawable/healthyeating24"
+            android:drawablePadding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_asal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Asal Kuliner"
+            android:fontFamily="@font/quicksandbold"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:drawableStart="@drawable/asal24"
+            android:drawablePadding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_deskripsi_singkat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Deskripsi Kuliner"
+            android:fontFamily="@font/quicksandmedium"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:drawableStart="@drawable/desc24"
+            android:drawablePadding="10dp"
+            />
+
 
     </LinearLayout>
 
