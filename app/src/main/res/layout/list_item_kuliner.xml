@@ -59,6 +59,8 @@
             android:layout_margin="10dp"
             android:drawableStart="@drawable/desc24"
             android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
             />
 
 

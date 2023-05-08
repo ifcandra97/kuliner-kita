@@ -14,7 +14,7 @@ import com.candra.kulinerkita.R;
 
 import java.util.List;
 
-public class AdapterKuliner extends RecyclerView.Adapter<AdapterKuliner.HolderData>
+public class AdapterKuliner extends RecyclerView.Adapter<AdapterKuliner.VHKuliner>
 {
     private Context context;
     private List<ModelKuliner> listKuliner;
@@ -26,17 +26,16 @@ public class AdapterKuliner extends RecyclerView.Adapter<AdapterKuliner.HolderDa
 
     @NonNull
     @Override
-    public AdapterKuliner.HolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public VHKuliner onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_kuliner, parent, false);
-        HolderData holderData = new HolderData(v);
-        return  holderData;
+        return new VHKuliner(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AdapterKuliner.HolderData holder, int position) {
+    public void onBindViewHolder(@NonNull VHKuliner holder, int position) {
         ModelKuliner mk = listKuliner.get(position);
 
-        holder.tvId.setText(String.valueOf(mk.getId()));
+        holder.tvId.setText(mk.getId());
         holder.tvNama.setText(mk.getNama());
         holder.tvAsal.setText(mk.getAsal());
         holder.tvDeskripsiSingkat.setText(mk.getDeskripsi_singkat());
@@ -47,11 +46,11 @@ public class AdapterKuliner extends RecyclerView.Adapter<AdapterKuliner.HolderDa
         return listKuliner.size();
     }
 
-    public class HolderData extends RecyclerView.ViewHolder
+    public class VHKuliner extends RecyclerView.ViewHolder
     {
         TextView tvId, tvNama, tvAsal, tvDeskripsiSingkat;
 
-        public HolderData(@NonNull View itemView) {
+        public VHKuliner(@NonNull View itemView) {
             super(itemView);
 
             tvId = itemView.findViewById(R.id.tv_id);
@@ -59,12 +58,12 @@ public class AdapterKuliner extends RecyclerView.Adapter<AdapterKuliner.HolderDa
             tvAsal = itemView.findViewById(R.id.tv_asal);
             tvDeskripsiSingkat = itemView.findViewById(R.id.tv_deskripsi_singkat);
 
-            itemView.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    return false;
-                }
-            });
+//            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+//                @Override
+//                public boolean onLongClick(View v) {
+//                    return false;
+//                }
+//            });
         }
     }
 }
