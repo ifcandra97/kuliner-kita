@@ -8,8 +8,22 @@
     android:background="#B4E4FF"
     tools:context=".Activity.MainActivity">
 
+    <TextView
+        android:id="@+id/tv_judul_kuliner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kuliner Indonesia"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/quicksandbold"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp"
+        />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_kuliner"
+        android:layout_below="@id/tv_judul_kuliner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/list_item_kuliner"
